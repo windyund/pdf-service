@@ -1,5 +1,7 @@
 # pdf-service
-A PDF generation service developed based on Microsoft's Playwright. It supports generating vector PDFs and generating PDFs by stitching screenshots. It is stable under high concurrency tests.
+A PDF generation service developed based on Microsoft's Playwright.   
+It supports generating vector PDFs and generating PDFs by stitching screenshots.  
+It is stable under high concurrency tests.
 
 ### 目录结构
 
@@ -33,7 +35,7 @@ workspace
   ```
   https://playwright.dev/java/docs/ci-intro
   ```
-  
+
 ## 支持http和kafka 2种方式发送请求服务
 请求参数或者消息体
 ```json5
