@@ -1,0 +1,27 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: smart-pdf-service
+  profiles:
+    active: production
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+neural:
+  workdir: report
+
+oss:
+  accessKeyId: xx
+  accessKeySecret: xx
+  endpoint: xxx
+  bucketName: xx
