@@ -1,0 +1,19 @@
+{
+  "req_id": "61d6c859fcca77b5f6a29f6f-12205239",
+  "biz_id": "61d6c859fcca77b5f6a29f6f-12205239",
+  "biz_type": "xc_student_report",
+  "handler": "pdf",
+  "reports": [
+    {
+      "report_id": "61d6c859fcca77b5f6a29f6f-12205239",
+      "report_name": "赵行成绩单.pdf",
+      "report_path": "监测",
+      "oss_key": "xxx.pdf",
+      "report_url": "https://xxx"
+    }
+  ],
+  "notify": {
+    "type": "kafka",
+    "callback": "smart_pdf_notify"
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <property resource="application.yml"/>
+    <property name="log.path" value="./logs"/>
+    <property name="log.name" value="neural"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %5p %40.40c:%4L - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="fileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <File>${log.path}/${log.name}.log</File>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>${log.path}/${log.name}.%d{yyyyMMdd}-%i.log</FileNamePattern>
+            <maxHistory>7</maxHistory>
+            <TimeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>50MB</maxFileSize>
+            </TimeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%d %5p %40.40c:%4L - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+        <appender-ref ref="fileAppender"/>
+    </root>
+
+    <logger name="com.smart" additivity="false">
+        <level value="${logger.level:INFO}"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="fileAppender"/>
+    </logger>
+
+</configuration>

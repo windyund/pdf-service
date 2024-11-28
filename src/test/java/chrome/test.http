@@ -1,0 +1,13 @@
+
+### pdf生成测试
+POST http://127.0.0.1:9999/test
+Content-Type: application/json
+
+< ./test_big.json
+
+
+### 测试2
+POST http://127.0.0.1:9999/pdf
+Content-Type: application/json
+
+< ./single.json

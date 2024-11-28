@@ -1,0 +1,23 @@
+{
+  "req_id": "xxx-3-330326",
+  "biz_id": "xxx",
+  "biz_type": "exam_report",
+  "handler": "snapshot",
+  "reports": [
+    {
+      "report_id": "xxx",
+      "report_name": "阅读A卷报告.pdf",
+      "report_path": "exam_report",
+      "report_url": "https://xxx",
+      "oss_key": "exam/report/production/online/E_10302297447824/pdf/P_10300391508714-3-330326.pdf",
+      "ext": null
+    }
+  ],
+  "zip": false,
+  "zip_name": null,
+  "zip_oss_key": null,
+  "notify": {
+    "type": "kafka",
+    "callback": "smart_pdf_notify"
+  }
+}
